@@ -11,100 +11,63 @@
     <!-- Favicon -->
     <link rel="icon" href="files/tape.png" type="image/png">
     
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://i.ibb.co/kRLnFsc/tapers.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            color: black;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3em;
-            color: black;
-        }
-        h2, h3 {
-            font-size: 2em;
-            color: black;
-        }
-        p, ul {
-            font-size: 1.2em;
-        }
-        ul {
-            text-align: left;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        a {
-            font-size: 20px;
-            color: black;
-            text-decoration: none;
-            border: 2px solid black;
-            padding: 10px 20px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        hr {
-            width: 50%;
-            margin: 20px auto;
-            border: 2px solid black;
-        }
-        .footer {
-            font-size: 1em;
-            margin-top: 20px;
-        }
-        .manifesto-signature {
-            font-size: 1.2em;
-            margin-top: 30px;
-        }
-    </style>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
 
-    <h1>THE TAPERS' MANIFESTO</h1>
-    <hr>
-    
-    <p><b>Listen up.</b>  
-    Tapers — the dedicated, sound-chasing pioneers — are the <b>guardians of music history</b>.<br>
-    Without the efforts of tapers, some of the greatest moments in music would fade into thin <b>obscurity</b>.</p>
+    <div class="content-container">
+        <h1>THE TAPERS' MANIFESTO</h1>
+        <hr>
+        
+        <p><b>Listen up.</b>  
+        Tapers — the dedicated, sound-chasing pioneers — are the <b>guardians of music history</b>.<br>
+        Without the efforts of tapers, some of the greatest moments in music would fade into thin <b>obscurity</b>.</p>
 
-    <h2>WHY TAPERS MATTER</h2>
-    <ul>
-        <li><b>Because live music isn't meant to end</b> the second the amps go quiet.</li>
-        <li><b>Because artists create magic,</b> and someone has to capture it.</li>
-        <li><b>Because memories fade,</b> but tapes don’t.</li>
-        <li><b>Because nobody else will do it right</b> — not labels, not TikTok, not corporations.</li>
-    </ul>
+        <h2>WHY TAPERS MATTER</h2>
+        <ul>
+            <li><b>Because live music isn't meant to end</b> the second the amps go quiet.</li>
+            <li><b>Because artists create magic,</b> and someone has to capture it.</li>
+            <li><b>Because memories fade,</b> but tapes don’t.</li>
+            <li><b>Because nobody else will do it right</b> — not labels, not TikTok, not corporations.</li>
+        </ul>
 
-    <h2>WHAT WE DO</h2>
-    <p>We haul gear through <b>rain, sweat, and challenging venues</b>.<br>
-    We battle <b>bad acoustics</b>, enthusiastic crowds, and security guards.<br>
-    We hit <b>RECORD</b> when it matters most.<br>
-    We document history one show, one night, one <b>raw moment</b> at a time.</p>
+        <h2>WHAT WE DO</h2>
+        <p>We haul gear through <b>rain, sweat, and challenging venues</b>.<br>
+        We battle <b>bad acoustics</b>, enthusiastic crowds, and security guards.<br>
+        We hit <b>RECORD</b> when it matters most.<br>
+        We document history one show, one night, one <b>raw moment</b> at a time.</p>
 
-    <h2>IN CONCLUSION</h2>
-    <p>If you're a taper, you’re not just recording.<br>
-    You’re <b>preserving culture</b>.<br>
-    You’re a <b>guardian of live music history</b>.<br>
-    <b>Stand proud. Stand together.</b><br>
-    Tape it or <b>lose it forever</b>.</p>
+        <h2>IN CONCLUSION</h2>
+        <p>If you're a taper, you’re not just recording.<br>
+        You’re <b>preserving culture</b>.<br>
+        You’re a <b>guardian of live music history</b>.<br>
+        <b>Stand proud. Stand together.</b><br>
+        Tape it or <b>lose it forever</b>.</p>
 
-    <hr>
+        <hr>
 
-    <div class="manifesto-signature">
-        <p>Signed,<br>
-        The Tapers' Underground Collective</p>
-    </div>
+        <div class="manifesto-signature">
+            <p>Signed,<br>
+            The Tapers' Underground Collective</p>
+        </div>
 
-    <h3>RESPECT THE TAPE. RESPECT THE TAPER.</h3>
+        <h3>RESPECT THE TAPE. RESPECT THE TAPER.</h3>
 
-    <a href="files/THE TAPERS' MANIFESTO.txt" download>⬇ Download the Manifesto (.txt)</a>
+        <div class="footer">
+            <p>&copy; 2025, The Tapers' Underground<br>
+            This manifesto may be freely shared, shouted, printed, and passed hand-to-hand — but only in its entirety with this notice.</p>
+        </div>
 
-    <div class="footer">
-        <p>&copy; 2025, The Tapers' Underground<br>
-        This manifesto may be freely shared, shouted, printed, and passed hand-to-hand — but only in its entirety with this notice.</p>
+        <!-- Like button form for Formspree -->
+        <div class="button-container">
+            <form action="https://formspree.io/f/myzwkavz" method="POST">
+                <!-- Hidden input to make sure Formspree accepts the submission -->
+                <input type="hidden" name="like" value="true">
+                <button type="submit" class="like-button">✊ I Stand With the Manifesto</button>
+            </form>
+            <a href="files/THE TAPERS' MANIFESTO.txt" class="download-button" download>💾 Download</a>
+        </div>
     </div>
 
   </body>
