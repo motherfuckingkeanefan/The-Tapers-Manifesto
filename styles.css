@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Body and Layout */
 body {
     font-family: Arial, sans-serif;
@@ -76,10 +74,11 @@ hr {
     display: flex;
     justify-content: center;  /* Align buttons horizontally */
     gap: 20px; /* Space between buttons */
+    align-items: center; /* Vertically align buttons */
 }
 
-/* Button Styling */
-.like-button, .download-button {
+/* Like Button Styling */
+.like-button {
     font-size: 20px;
     padding: 10px 20px;
     border: 2px solid black;
@@ -88,6 +87,32 @@ hr {
     cursor: pointer;
     text-align: center;
     line-height: 1.5;
+    transition: background 0.3s ease, color 0.3s ease; /* Add smooth transition */
+}
+
+/* Download Button Styling */
+.download-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.5;
+    transition: background 0.3s ease, color 0.3s ease; /* Add smooth transition */
+    margin: 0; /* Remove margin from the right button */
+}
+
+/* Remove margin from the form wrapping the left button */
+.like-form {
+    margin: 0; /* Remove any default margin */
+}
+
+/* Hover effect for buttons */
+.like-button:hover, .download-button:hover {
+    background-color: black;
+    color: white;
 }
 
 /* Mobile Responsiveness */
