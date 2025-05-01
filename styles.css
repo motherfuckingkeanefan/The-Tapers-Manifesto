@@ -10,14 +10,14 @@ body {
     margin: 0;
 }
 
-/* Container for the entire content */
+/* Container */
 .content-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Heading styles */
+/* Headings */
 h1 {
     font-size: 3em;
     color: black;
@@ -29,6 +29,7 @@ h2, h3 {
     color: black;
 }
 
+/* Text */
 p, ul {
     font-size: 1.2em;
     color: black;
@@ -41,13 +42,7 @@ ul {
 }
 
 a {
-    font-size: 20px;
-    color: black;
     text-decoration: none;
-    border: 2px solid black;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 20px;
 }
 
 hr {
@@ -68,17 +63,21 @@ hr {
     color: black;
 }
 
-/* Aligning buttons next to each other using Flexbox */
+/* Button Container */
 .button-container {
     margin-top: 30px;
     display: flex;
-    justify-content: center;  /* Align buttons horizontally */
-    gap: 20px; /* Space between buttons */
-    align-items: center; /* Vertically align buttons */
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Like Button Styling */
-.like-button {
+/* Shared Button Style */
+.like-button,
+.download-button,
+.supporter-button,
+.share-button {
     font-size: 20px;
     padding: 10px 20px;
     border: 2px solid black;
@@ -87,32 +86,21 @@ hr {
     cursor: pointer;
     text-align: center;
     line-height: 1.5;
-    transition: background 0.3s ease, color 0.3s ease; /* Add smooth transition */
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Download Button Styling */
-.download-button {
-    font-size: 20px;
-    padding: 10px 20px;
-    border: 2px solid black;
-    background: transparent;
-    color: black;
-    cursor: pointer;
-    text-align: center;
-    line-height: 1.5;
-    transition: background 0.3s ease, color 0.3s ease; /* Add smooth transition */
-    margin: 0; /* Remove margin from the right button */
-}
-
-/* Remove margin from the form wrapping the left button */
-.like-form {
-    margin: 0; /* Remove any default margin */
-}
-
-/* Hover effect for buttons */
-.like-button:hover, .download-button:hover {
+/* Hover Effect for All Buttons */
+.like-button:hover,
+.download-button:hover,
+.supporter-button:hover,
+.share-button:hover {
     background-color: black;
     color: white;
+}
+
+/* Like form layout */
+.like-form {
+    margin: 0;
 }
 
 /* Mobile Responsiveness */
@@ -133,13 +121,15 @@ hr {
         font-size: 0.9em;
     }
 
-    /* For mobile, stack the buttons vertically */
     .button-container {
-        flex-direction: column;  /* Stack buttons vertically */
-        gap: 10px; /* Space between buttons on mobile */
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .like-button, .download-button {
-        width: 100%; /* Make buttons full width */
+    .like-button,
+    .download-button,
+    .supporter-button,
+    .share-button {
+        width: 100%;
     }
 }
