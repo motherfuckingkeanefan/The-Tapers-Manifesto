@@ -65,10 +65,9 @@ hr {
 }
 
 /* Button Container */
-/* Positioned above the fade overlay */
 .button-container {
-    position: relative;    /* establish new stacking context */
-    z-index: 1000;         /* higher than .white-fade’s 999 */
+    position: relative;
+    z-index: 1000;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -94,7 +93,6 @@ hr {
     white-space: nowrap;
 }
 
-/* Hover Effect for All Buttons */
 .like-button:hover,
 .download-button:hover,
 .supporter-button:hover,
