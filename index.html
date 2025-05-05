@@ -5,6 +5,13 @@
   <title>The Tapers' Manifesto</title>
   <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-color: #000;
+      --accent-color: #0000cc;
+      --bg-color: #fff;
+      --font: 'Droid Serif', serif;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,97 +19,155 @@
     }
 
     body {
-      background: #fff;
-      color: #000;
-      font-family: 'Droid Serif', serif;
-      line-height: 1.8;
-      max-width: 680px;
-      margin: 4rem auto;
-      padding: 0 1rem;
+      font-family: var(--font);
+      background: var(--bg-color);
+      color: var(--main-color);
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+    header {
       text-align: center;
+      margin-bottom: 2rem;
     }
 
-    h2 {
-      font-size: 1.1rem;
-      margin-top: 2rem;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      opacity: 0.8;
-    }
-
-    p {
-      margin: 1rem 0;
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: bold;
     }
 
     .quote {
       font-style: italic;
       margin: 2rem 0;
       text-align: center;
+      font-size: 1.1rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    nav {
+      text-align: center;
+      margin: 2rem 0;
     }
 
-    li {
-      margin: 1.2rem 0;
+    nav a {
+      margin: 0 0.75rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
     }
 
-    a {
-      color: #0000cc;
+    nav a:hover {
       text-decoration: underline;
     }
 
-    .footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.4rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .downloads a {
+      display: block;
+      margin: 0.4rem 0;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .downloads a::before {
+      content: "↘ ";
+      color: var(--accent-color);
+    }
+
+    footer {
+      font-size: 0.85rem;
       text-align: center;
-      opacity: 0.7;
+      margin-top: 4rem;
+      border-top: 1px solid #ccc;
+      padding-top: 2rem;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
 
-  <h1>The Tapers' Manifesto</h1>
-  <div class="quote">"We are the guardians of sound, the keepers of the moment. Every note is sacred, every performance immortal."</div>
+  <header>
+    <h1>The Tapers' Manifesto</h1>
+  </header>
 
-  <ul>
-    <li><strong>1.</strong> We are the chroniclers of live sound. We don’t record for profit — we preserve. We document. We share.</li>
-    <li><strong>2.</strong> Music is not a commodity. It is a moment, alive and fleeting — not a product. We reject its exploitation.</li>
-    <li><strong>3.</strong> We honor imperfection. The hiss, the cheers, the off-key note — these are the truths of live sound. They matter.</li>
-    <li><strong>4.</strong> The crowd, the room, the breath between notes — these are part of the art. We capture environments.</li>
-    <li><strong>5.</strong> Taping is not piracy. It is preservation. We are cultural archivists, not thieves.</li>
-    <li><strong>6.</strong> We reject the ownership model of sound. Music should not be fenced in. It lives through being shared.</li>
-    <li><strong>7.</strong> Every tape is resistance. To record is to defy the gatekeepers of access.</li>
-    <li><strong>8.</strong> We share. We do not sell. Taping is a gift — from taper to listener.</li>
-    <li><strong>9.</strong> The tape is proof. It proves the music happened. That we were there. That it mattered.</li>
-    <li><strong>10.</strong> Taping is personal. It’s passion, not business. A commitment, not a transaction.</li>
-    <li><strong>11.</strong> We seek no fame, no fortune. Our reward is memory — preserved, protected, passed on.</li>
-    <li><strong>12.</strong> We reject music industry elitism. Sound is not for sale. Music is not for moguls. It belongs to everyone.</li>
-    <li><strong>13.</strong> The mainstream is irrelevant. The underground thrives without approval.</li>
-    <li><strong>14.</strong> The internet is our amplifier. The web is where tapes live and speak freely.</li>
-    <li><strong>15.</strong> This manifesto speaks for one. I speak with love, not authority.</li>
-    <li><strong>16.</strong> Join the quiet revolution. Tape. Preserve. Share. Refuse to forget.</li>
-  </ul>
-
-  <div class="footer">
-    — Written by The Shadow Archivist<br>
-    May 4, 2025
+  <div class="quote">
+    "We are the guardians of sound. Each tape is a rebellion, a record, a relic."
   </div>
 
-  <h2>Downloads</h2>
-  <p>
-    [TXT] <a href="files/The Tapers' Manifesto.txt">The_Tapers_Manifesto.txt</a><br>
-    [PDF] <a href="files/The Tapers' Manifesto.pdf">The_Tapers_Manifesto.pdf</a><br>
-    [DOCX] <a href="files/The Tapers' Manifesto.docx">The_Tapers_Manifesto.docx</a>
-  </p>
+  <nav>
+    <a href="#manifesto">Manifesto</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <section id="manifesto">
+    <h2>Core Principles</h2>
+    <p>
+      We are the quiet collectors of moments that were never meant to be forgotten. Taping is not just a technical act — it is an emotional one. Each time we press record, we are making a pact with the future: that this night, this room, this performance will not vanish into memory. We do not record for vanity or commerce. We do it for history. We do it for the ones who couldn’t be there. We do it because no one else will.
+    </p>
+    <p>
+      Music is not just sound. It is experience, and experience resists ownership. A song on a stage, heard once and never again, is not a product — it’s a living thing. Our tapes are not bootlegs. They are testaments. We reject the idea that music must be packaged and sold to be valuable. Its real value lies in the breath between verses, the roar of the crowd, the unexpected encore that made the night unforgettable.
+    </p>
+    <p>
+      Perfection does not interest us. We embrace the crackle of the mic, the chatter of the crowd, the uneven mix. These so-called flaws are proof of life — of real sound, in real time, from real places. The music industry may polish and compress, but we capture reality. Our recordings are not imitations. They are artifacts.
+    </p>
+    <p>
+      We are not pirates. We are archivists. Every tape is a cultural record. We do not sell. We do not profit. We preserve and share because music was meant to be passed on. A taper’s goal is not applause, but access — to democratize the stage, to decentralize memory. Our reward is in knowing that one day, someone will press play and be transported.
+    </p>
+    <p>
+      We are not chasing recognition. We do not wear credentials. We work in shadow, often without permission, but always with purpose. The industry may try to gatekeep, but we slip through. Every recording is quiet defiance — against loss, against silence, against forgetting.
+    </p>
+    <p>
+      Taping is personal. It is our ritual, our resistance, our love letter to live music. We don’t seek followers. We seek fidelity — not in sound quality, but in spirit. Each archive we build is a home for sound that would otherwise be lost.
+    </p>
+    <p>
+      We don’t represent all tapers. There is no one voice. But this is one voice, spoken with care, conviction, and deep affection for the art we protect. The tape rolls because the moment matters.
+    </p>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <div class="downloads">
+      <a href="files/The Tapers' Manifesto.txt">Download TXT</a>
+      <a href="files/The Tapers' Manifesto.pdf">Download PDF</a>
+      <a href="files/The Tapers' Manifesto.docx">Download DOCX</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About the Author</h2>
+    <p>
+      Penned anonymously by <strong>The Shadow Archivist</strong> on May 4, 2025.<br>
+      This document is a declaration — a solitary voice echoing a collective truth.<br>
+      For those who believe in the beauty of preservation over profit.
+    </p>
+    <p>
+      Learn more at <a href="https://etree.org" target="_blank">etree.org</a> — one of the longest-running online tape archives.<br>
+      Or explore <a href="https://archive.org/details/etree" target="_blank">the Live Music Archive</a> at Internet Archive.
+    </p>
+  </section>
+
+  <footer>
+    This page is a free and open document. Share it. Mirror it. Live it.<br>
+    &copy; 2025 The Shadow Archivist. No rights reserved.
+  </footer>
 
 </body>
 </html>
