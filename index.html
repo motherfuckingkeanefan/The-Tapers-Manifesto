@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="author" content="The Shadow Archivist">
-  <meta name="description" content="The Tapers' Manifesto - a declaration of love and rebellion for live music archivists.">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="author" content="The Shadow Archivist" />
+  <meta name="description" content="The Tapers' Manifesto – A document of defiance, devotion, and analog memory." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="The Tapers' Manifesto" />
+  <meta property="og:description" content="A declaration of love and rebellion for live music archivists." />
+  <meta property="og:image" content="your-image-url.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="your-site-url" />
   <title>The Tapers' Manifesto</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Roboto+Mono&family=Droid+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --main-color: #000;
-      --accent-color: #0000cc;
+      --main-color: #111;
+      --accent-color: #005eff;
       --bg-color: #fdfdfb;
-      --font: 'Droid Serif', serif;
+      --font-body: 'Droid Serif', serif;
+      --font-heading: 'Fira Sans', sans-serif;
+      --font-mono: 'Roboto Mono', monospace;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg-color: #111;
+        --bg-color: #0c0c0c;
         --main-color: #eee;
-        --accent-color: #6699ff;
+        --accent-color: #66aaff;
       }
     }
 
@@ -36,11 +42,11 @@
     }
 
     body {
-      font-family: var(--font);
+      font-family: var(--font-body);
       background: var(--bg-color);
       color: var(--main-color);
-      line-height: 1.6;
       font-size: 18px;
+      line-height: 1.7;
       max-width: 720px;
       margin: 0 auto;
       padding: 3rem 1.5rem 4rem;
@@ -48,66 +54,97 @@
 
     header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease-in;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
       letter-spacing: -0.02em;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+      font-style: italic;
     }
 
     .quote {
+      text-align: center;
+      font-size: 1.5rem;
       font-style: italic;
-      font-size: 1.25rem;
-      color: #444;
+      margin: 2.5rem 0;
+      color: var(--accent-color);
       position: relative;
-      padding-left: 1.5rem;
-      margin: 2rem 0;
+      padding: 0 1rem;
+      animation: slideIn 1s ease-out;
+    }
+
+    .quote::before,
+    .quote::after {
+      content: '“';
+      font-size: 2rem;
+      color: var(--accent-color);
+      position: absolute;
     }
 
     .quote::before {
-      content: "“";
-      font-size: 2.5rem;
-      position: absolute;
-      left: 0;
-      top: -0.3rem;
-      color: #ccc;
+      left: -0.8rem;
+      top: -0.5rem;
+    }
+
+    .quote::after {
+      content: '”';
+      right: -0.8rem;
+      bottom: -0.5rem;
     }
 
     nav {
       text-align: center;
-      margin: 2.5rem 0;
+      margin: 2rem 0 3rem;
     }
 
     nav a {
       margin: 0 1rem;
       color: var(--accent-color);
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
       font-size: 0.95rem;
-      transition: color 0.2s ease-in-out;
+      position: relative;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-      color: #3333ff;
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: var(--accent-color);
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
     }
 
-    section {
-      margin-bottom: 3rem;
+    nav a:hover::after {
+      width: 100%;
     }
 
     h2 {
       font-size: 0.95rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       color: #666;
       border-left: 3px solid var(--accent-color);
-      padding-left: 0.5rem;
-      margin-bottom: 1.25rem;
+      padding-left: 0.6rem;
+      margin-bottom: 1.4rem;
       font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 3rem;
     }
 
     p {
@@ -116,10 +153,11 @@
 
     .downloads a {
       display: block;
-      margin: 0.4rem 0;
+      margin: 0.5rem 0;
       color: var(--accent-color);
       text-decoration: none;
-      transition: color 0.2s ease-in-out;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
     }
 
     .downloads a::before {
@@ -128,16 +166,51 @@
     }
 
     .downloads a:hover {
-      color: #3333ff;
+      text-decoration: underline;
+    }
+
+    .signoff {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px dashed #888;
+      color: #aaa;
     }
 
     footer {
-      font-size: 0.85rem;
       text-align: center;
+      font-size: 0.85rem;
       margin-top: 4rem;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #444;
       padding-top: 2rem;
-      opacity: 0.6;
+      opacity: 0.7;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent-color);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -145,10 +218,11 @@
 
   <header>
     <h1>The Tapers' Manifesto</h1>
+    <p>A declaration of rebellion, reverence, and remembrance.</p>
   </header>
 
   <div class="quote">
-    "We are the guardians of sound. Each tape is a rebellion, a record, a relic."
+    We are the guardians of sound. Each tape is a rebellion, a record, a relic.
   </div>
 
   <nav>
@@ -157,57 +231,42 @@
     <a href="#about">About</a>
   </nav>
 
-   <section id="manifesto">
+  <section id="manifesto">
     <h2>Core Principles</h2>
-    <p>
-      We are the quiet collectors of moments that were never meant to be forgotten. Taping is not just a technical act — it is an emotional one. Each time we press record, we are making a pact with the future: that this night, this room, this performance will not vanish into memory. We do not record for vanity or commerce. We do it for history. We do it for the ones who couldn’t be there. We do it because no one else will.
-    </p>
-    <p>
-      Music is not just sound. It is experience, and experience resists ownership. A song on a stage, heard once and never again, is not a product — it’s a living thing. Our tapes are not bootlegs. They are testaments. We reject the idea that music must be packaged and sold to be valuable. Its real value lies in the breath between verses, the roar of the crowd, the unexpected encore that made the night unforgettable.
-    </p>
-    <p>
-      Perfection does not interest us. We embrace the crackle of the mic, the chatter of the crowd, the uneven mix. These so-called flaws are proof of life — of real sound, in real time, from real places. The music industry may polish and compress, but we capture reality. Our recordings are not imitations. They are artifacts.
-    </p>
-    <p>
-      We are not pirates. We are archivists. Every tape is a cultural record. We do not sell. We do not profit. We preserve and share because music was meant to be passed on. A taper’s goal is not applause, but access — to democratize the stage, to decentralize memory. Our reward is in knowing that one day, someone will press play and be transported.
-    </p>
-    <p>
-      We are not chasing recognition. We do not wear credentials. We work in shadow, often without permission, but always with purpose. The industry may try to gatekeep, but we slip through. Every recording is quiet defiance — against loss, against silence, against forgetting.
-    </p>
-    <p>
-      Taping is personal. It is our ritual, our resistance, our love letter to live music. We don’t seek followers. We seek fidelity — not in sound quality, but in spirit. Each archive we build is a home for sound that would otherwise be lost.
-    </p>
-    <p>
-      We don’t represent all tapers. There is no one voice. But this is one voice, spoken with care, conviction, and deep affection for the art we protect. The tape rolls because the moment matters.
-    </p>
+    <p>We are the quiet collectors of moments too sacred to be forgotten. Taping is not a task — it is a vow. When we hit record, we consecrate the unrepeatable.</p>
+    <p>We don’t capture shows to own them. We preserve them to free them. Our tapes are not bootlegs. They are memory, made magnetic.</p>
+    <p>Perfect sound is not our god. The hiss, the crowd, the cough — we honor it all. This is not studio gloss. This is sweat and strings and spirit.</p>
+    <p>We are not pirates. We are librarians of the ephemeral. We take nothing. We give everything. Our reward is the moment being heard again.</p>
+    <p>We wear no passes. We speak no names. We operate from the edges — unseen but essential.</p>
+    <p>Taping is our ritual. Our resistance. Our remix of reality. Each archive is an act of love louder than the applause.</p>
+    <p>This is not the voice of all tapers. It is one signal from the noise — steady, defiant, true.</p>
+    <div class="signoff">We are the tape. We are the moment. We are the archive.</div>
   </section>
 
   <section id="downloads">
     <h2>Downloads</h2>
     <div class="downloads">
-      <a href="files/The Tapers' Manifesto.txt">Download TXT</a>
-      <a href="files/The Tapers' Manifesto.pdf">Download PDF</a>
-      <a href="files/The Tapers' Manifesto.docx">Download DOCX</a>
+      <a href="files/The Tapers' Manifesto.txt">Download .txt</a>
+      <a href="files/The Tapers' Manifesto.pdf">Download .pdf</a>
+      <a href="files/The Tapers' Manifesto.docx">Download .docx</a>
     </div>
   </section>
 
   <section id="about">
     <h2>About the Author</h2>
+    <p>Written anonymously by <strong>The Shadow Archivist</strong>, May 4, 2025.</p>
+    <p>For those who stand at the back of the room with a mic and a mission. This is for you.</p>
     <p>
-      Penned anonymously by <strong>The Shadow Archivist</strong> on May 4, 2025.<br>
-      This document is a declaration — a solitary voice echoing a collective truth.<br>
-      For those who believe in the beauty of preservation over profit.
-    </p>
-    <p>
-      Learn more at <a href="https://taperssection.com/" target="_blank" rel="noopener noreferrer">taperssection.com</a><br>
-      Or explore the <a href="https://archive.org/details/etree" target="_blank" rel="noopener noreferrer">Live Music Archive</a>.
+      Learn more at <a href="https://taperssection.com/" target="_blank" rel="noopener noreferrer">taperssection.com</a> or visit the <a href="https://archive.org/details/etree" target="_blank" rel="noopener noreferrer">Live Music Archive</a>.
     </p>
   </section>
 
   <footer>
-    This page is a free and open document. Share it. Mirror it. Live it.<br>
+    This page is a free and open document. Share it. Mirror it. Live it.<br />
     &copy; 2025 The Shadow Archivist. No rights reserved.
   </footer>
+
+  <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
 </body>
 </html>
